@@ -78,14 +78,12 @@ int install_zip(const char* packagefilepath)
 }
 
 char* INSTALL_MENU_ITEMS[] = {  "choose zip from sdcard",
-                                "apply /sdcard/update.zip",
                                 "toggle signature verification",
                                 "toggle script asserts",
                                 NULL };
 #define ITEM_CHOOSE_ZIP       0
-#define ITEM_APPLY_SDCARD     1
-#define ITEM_SIG_CHECK        2
-#define ITEM_ASSERTS          3
+#define ITEM_SIG_CHECK        1
+#define ITEM_ASSERTS          2
 
 void show_install_update_menu()
 {
@@ -363,7 +361,7 @@ void show_mount_usb_storage_menu()
         return -1;
     }
     static char* headers[] = {  "USB Mass Storage device",
-                                "Leaving this menu unmount",
+                                "Leave this menu, unmount",
                                 "your SD card from your PC.",
                                 "",
                                 NULL
@@ -399,10 +397,6 @@ int confirm_selection(const char* title, const char* confirm)
 
     char* confirm_headers[]  = {  title, "  THIS CAN NOT BE UNDONE.", "", NULL };
     char* items[] = { "No",
-                      "No",
-                      "No",
-                      "No",
-                      "No",
                       "No",
                       "No",
                       confirm, //" Yes -- wipe partition",   // [7
