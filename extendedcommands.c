@@ -401,14 +401,14 @@ int confirm_selection(const char* title, const char* confirm)
     char* items[] = { "No",
                       "No",
                       "No",
-                      confirm, //" Yes -- wipe partition",   // [7
+                      confirm, //" Yes -- wipe partition",   // [3
                       "No",
                       "No",
                       "No",
                       NULL };
 
     int chosen_item = get_menu_selection(confirm_headers, items, 0, 0);
-    return chosen_item == 7;
+    return chosen_item == 3;
 }
 
 #define MKE2FS_BIN      "/sbin/mke2fs"
